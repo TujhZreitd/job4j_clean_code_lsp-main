@@ -10,4 +10,3 @@ public interface UserAction {
 
     boolean execute(Menu menu, ActionDelegate action);
 }
-/*для коммита*/

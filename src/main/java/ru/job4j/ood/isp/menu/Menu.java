@@ -70,4 +70,3 @@ public interface Menu extends Iterable<Menu.MenuItemInfo> {
         }
     }
 }
-/*для коммита*/

@@ -11,4 +11,3 @@ public class ExitTodaApp implements UserAction {
         return false;
     }
 }
-/*для коммита*/

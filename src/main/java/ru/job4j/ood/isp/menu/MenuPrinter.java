@@ -4,4 +4,3 @@ public interface MenuPrinter {
 
         void print(Menu menu);
 }
-/*для коммита*/

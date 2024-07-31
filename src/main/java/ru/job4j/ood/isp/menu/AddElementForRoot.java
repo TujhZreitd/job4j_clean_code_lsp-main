@@ -13,4 +13,3 @@ public class AddElementForRoot implements UserAction {
         return menu.add(Menu.ROOT, name, action);
     }
 }
-/*для коммита*/

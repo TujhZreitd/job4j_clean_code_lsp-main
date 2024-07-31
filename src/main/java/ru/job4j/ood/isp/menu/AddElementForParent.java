@@ -15,4 +15,3 @@ public class AddElementForParent implements UserAction {
         return menu.add(nameParent, nameChild, action);
     }
 }
-/*для коммита*/

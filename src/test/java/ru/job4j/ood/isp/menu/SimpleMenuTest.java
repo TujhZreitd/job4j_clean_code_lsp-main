@@ -79,4 +79,3 @@ public class SimpleMenuTest {
         assertEquals(expected, OUT_CONTENT.toString());
     }
 }
-/*для коммита*/

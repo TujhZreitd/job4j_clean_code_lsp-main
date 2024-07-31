@@ -13,4 +13,3 @@ public class OutputMenu implements UserAction {
         return true;
     }
 }
-/*для коммита*/

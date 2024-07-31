@@ -29,4 +29,3 @@ public class Printer implements MenuPrinter {
 
     }
 }
-/*для коммита*/

@@ -10,4 +10,3 @@ public interface MenuItem {
 
     ActionDelegate getActionDelegate();
 }
-/*для коммита*/

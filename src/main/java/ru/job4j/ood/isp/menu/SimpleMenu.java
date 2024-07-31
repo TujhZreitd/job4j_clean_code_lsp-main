@@ -131,4 +131,3 @@ public class SimpleMenu implements Menu {
         }
     }
 }
-/*для коммита*/

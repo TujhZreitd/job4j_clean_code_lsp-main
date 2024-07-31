@@ -46,4 +46,3 @@ public class TodoApp {
         new TodoApp(menu).init(actions);
     }
 }
-/*для коммита*/
