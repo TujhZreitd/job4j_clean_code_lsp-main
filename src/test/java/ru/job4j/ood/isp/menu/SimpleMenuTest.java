@@ -14,8 +14,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class SimpleMenuTest {
 
     public static final ActionDelegate STUB_ACTION = System.out::println;
-    public final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-    public final PrintStream originalOut = System.out;
+    public static final ByteArrayOutputStream OUT_CONTENT = new ByteArrayOutputStream();
+    public static final PrintStream ORIGINAL_OUT = System.out;
 
     @Test
     public void whenAddThenReturnSame() {
@@ -53,13 +53,14 @@ public class SimpleMenuTest {
 
     @BeforeEach
     public void setUpStreams() {
-        System.setOut(new PrintStream(outContent));
+        System.setOut(new PrintStream(OUT_CONTENT));
     }
 
     @AfterEach
     public void restoreStreams() {
-        System.setOut(originalOut);
+        System.setOut(ORIGINAL_OUT);
     }
+
     @Test
     public void whenUsePrinter() {
         Menu menu = new SimpleMenu();
@@ -70,11 +71,12 @@ public class SimpleMenuTest {
         menu.add("Купить продукты", "Купить молоко", STUB_ACTION);
         MenuPrinter printer = new Printer();
         printer.print(menu);
-        String expected = "1.Сходить в магазин" + System.lineSeparator() +
-                "----1.1.Купить продукты" + System.lineSeparator() +
-                "--------1.1.1.Купить хлеб" + System.lineSeparator() +
-                "--------1.1.2.Купить молоко" + System.lineSeparator() +
-                "2.Покормить собаку" + System.lineSeparator();
-        assertEquals(expected, outContent.toString());
+        String expected = "1.Сходить в магазин" + System.lineSeparator()
+                + "----1.1.Купить продукты" + System.lineSeparator()
+                + "--------1.1.1.Купить хлеб" + System.lineSeparator()
+                + "--------1.1.2.Купить молоко" + System.lineSeparator()
+                + "2.Покормить собаку" + System.lineSeparator();
+        assertEquals(expected, OUT_CONTENT.toString());
     }
 }
+/*для коммита*/

@@ -4,9 +4,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class TodoApp {
-
+    private static final ActionDelegate DEFAULT_ACTION = () -> System.out.println("Some action");
     private final Scanner scanner = new Scanner(System.in);
-    private final ActionDelegate DEFAULT_ACTION = () -> System.out.println("Some action");
     private final Menu menu;
 
     public TodoApp(Menu menu) {
@@ -15,7 +14,7 @@ public class TodoApp {
 
     public void init(List<UserAction> actions) {
         boolean run = true;
-        while(run) {
+        while (run) {
             showMenu(actions);
             System.out.println("Выберете пункт (введите его номер)");
             int select = scanner.nextInt();
@@ -27,7 +26,6 @@ public class TodoApp {
             run = action.execute(menu, DEFAULT_ACTION);
         }
     }
-
 
     private void showMenu(List<UserAction> action) {
         System.out.println("Меню действий:");
@@ -48,3 +46,4 @@ public class TodoApp {
         new TodoApp(menu).init(actions);
     }
 }
+/*для коммита*/

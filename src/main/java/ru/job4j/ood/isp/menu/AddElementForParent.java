@@ -9,9 +9,10 @@ public class AddElementForParent implements UserAction {
     @Override
     public boolean execute(Menu menu, ActionDelegate action) {
         System.out.println("Введите имя родителя");
-        String nameParent = scanner.nextLine();
+        String nameParent = SCANNER.nextLine();
         System.out.println("Введите имя нового элемента");
-        String nameChild = scanner.nextLine();
+        String nameChild = SCANNER.nextLine();
         return menu.add(nameParent, nameChild, action);
     }
 }
+/*для коммита*/

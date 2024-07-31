@@ -9,7 +9,8 @@ public class AddElementForRoot implements UserAction {
     @Override
     public boolean execute(Menu menu, ActionDelegate action) {
         System.out.println("Введите название элемента");
-        String name = scanner.nextLine();
+        String name = SCANNER.nextLine();
         return menu.add(Menu.ROOT, name, action);
     }
 }
+/*для коммита*/
